@@ -1,0 +1,19 @@
+.ButtonChoice__button {
+  background: transparent;
+  line-height: 0;
+  padding: 1rem;
+  border: 3px solid;
+  margin: .5rem;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: .3s ease-in-out;
+}
+
+.ButtonChoice__text {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.ButtonChoice__button i {
+  font-size: 2rem;
+}

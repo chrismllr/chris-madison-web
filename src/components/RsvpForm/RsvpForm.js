@@ -9,38 +9,44 @@ export class RsvpForm extends Component {
     super(props);
 
     this.state = {
-      willAttend: null,
-      fullName: '',
-      hotDateName: ''
+      attending: true,
+      name: '',
+      plusOne: ''
     }
   }
 
-  onChange = (rf, val) => {
+  onChange = (rf, val) =>
     this.setState({ [rf]: val });
-  };
 
-  chooseAttendance = (value) => {
-    this.setState({ willAttend: value });
-  };
+  chooseAttendance = (value) =>
+    this.setState({ attending: value });
+
+  submitForm = (e) => {
+    e.preventDefault();
+    this.props.submitForm(this.state);
+  }
+
 
   render () {
     return (
-      <div>
+      <form onSubmit={this.submitForm}>
         <div className="Rsvp-form-buttons">
           <ButtonChoice
-            value="yes"
+            value={true}
             btnText="Duh!"
+            iconName="check"
             className="Rsvp-button-yes"
             activeClass="Rsvp-button-yes-selected"
-            selected={this.state.willAttend === 'yes'}
+            selected={this.state.attending}
             onClick={this.chooseAttendance}
           />
           <ButtonChoice
-            value="no"
+            value={false}
             btnText="Nah!"
+            iconName="close"
             className="Rsvp-button-no"
             activeClass="Rsvp-button-no-selected"
-            selected={this.state.willAttend === 'no'}
+            selected={!this.state.attending}
             onClick={this.chooseAttendance}
           />
         </div>
@@ -49,8 +55,8 @@ export class RsvpForm extends Component {
           <div className="Rsvp-form-input">
             <label htmlFor="full-name">Full Name</label>
             <TextInput
-              recordField="fullName"
-              value={this.state.fullName}
+              recordField="name"
+              value={this.state.name}
               onChange={this.onChange}
               attrs={{
                 placeholder: 'Full name'
@@ -60,8 +66,8 @@ export class RsvpForm extends Component {
           <div className="Rsvp-form-input">
             <label htmlFor="hot-date">Bringing a hot date?</label>
             <TextInput
-              recordField="hotDateName"
-              value={this.state.hotDateName}
+              recordField="plusOne"
+              value={this.state.plusOne}
               onChange={this.onChange}
               attrs={{
                 placeholder: 'Their full name'
@@ -69,7 +75,11 @@ export class RsvpForm extends Component {
             />
           </div>
         </div>
-      </div>
+
+        <div className="Rsvp-form-row">
+          <button className='Rsvp-submit-btn btn'>Submit</button>
+        </div>
+      </form>
     );
 
   }

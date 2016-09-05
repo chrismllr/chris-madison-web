@@ -53,14 +53,37 @@ h4, h5, h6, p {
   margin: 0;
 }
 
-button {
+.btn {
   font-family: 'Quicksand', sans-serif;
-  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid #555;
+  border-radius: 5px;
+  font-size: 1.33333rem;
+  height: 100%;
+  width: 100%;
+  padding: 1rem 1.33333rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--outline {
+  border: 3px solid #fff;
+  border-radius: 300px;
+}
+
+.btn--plain {
+  border: none;
 }
 
 label {
-  font-size: .83rem;
+  font-size: 1rem;
   font-weight: 700;
+  margin-bottom: .5rem;
   letter-spacing: .02rem;
   text-transform: uppercase;
   text-align: left;
@@ -68,11 +91,18 @@ label {
 }
 
 input {
-  padding: .75rem .5rem;
+  padding: 1rem .833333rem;
   border: 1px solid #222;
+  font-family: "Quicksand", sans-serif;
   border-radius: 3px;
-  font-size: 1rem;
+  font-size: 1.33333rem;
   width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid #4DC6FF;
+  box-shadow: rgba(77,198,255, .5) 0 0 0 3px;
 }
 
 .container {
@@ -83,5 +113,15 @@ input {
 }
 
 .section-header {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  margin-bottom: .3333rem;
+}
+
+.section-sub-head {
+  font-size: 1.3333rem;
+  text-transform: uppercase;
+  letter-spacing: .03rem;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
