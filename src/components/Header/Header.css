@@ -1,0 +1,24 @@
+.Header-fixed {
+  position: fixed;
+  width: 100%;
+}
+
+.Header {
+  display: flex;
+}
+
+.Header h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  color: #fff;
+  width: 4rem;
+  line-height: 1;
+  margin: 0.4rem;
+  transform: rotate(-15deg) skew(-6deg);
+}
+
+.Header h4 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .02rem;
+}

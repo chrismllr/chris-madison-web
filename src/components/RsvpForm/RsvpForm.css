@@ -1,0 +1,57 @@
+.Rsvp-form-row {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.Rsvp-form-input {
+  width: 100%;
+}
+
+.Rsvp-form-buttons {
+  margin-bottom: 1rem;
+}
+
+.Rsvp-form-buttons button {
+  font-family: "Palm Canyon", sans-serif;
+  background: transparent;
+  font-weight: 700;
+  font-size: 2.5rem;
+  padding: 0.1rem 1.6rem;
+  border: 3px solid;
+  margin: .5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+}
+
+.Rsvp-button-yes {
+  border-color: #34A853;
+  color: #34A853;
+}
+
+button.Rsvp-button-yes-selected {
+  border-color: #34A853;
+  background-color: #34A853;
+  color: #fff;
+}
+
+.Rsvp-button-no {
+  border-color: #FB0101;
+  color: #FB0101;
+}
+
+button.Rsvp-button-no-selected {
+  border-color: #FB0101;
+  background-color: #FB0101;
+  color: #fff;
+}
+
+@media (min-width: 600px) {
+  .Rsvp-form-input {
+    width: 50%;
+  }
+
+  .Rsvp-form-input:first-child {
+    margin-right: 1rem;
+  }
+}
