@@ -67,7 +67,7 @@ h4, h5, h6, p {
   text-transform: uppercase;
 }
 
-.btn:focus {
+button:focus {
   outline: none;
 }
 
