@@ -2,17 +2,24 @@ import React from 'react';
 const Scroll = require('react-scroll');
 const { animateScroll } = Scroll;
 
-// React-Scroll used for this component
-// https://www.npmjs.com/package/react-scroll
-// ====================================================
-
-export const ScrollButton = ({ id = 'ScrollButton0', to, btnText, btnClass, callback, duration = 800, offset = 0 }) => {
+export const ScrollButton = ({
+  id = 'ScrollButton0',
+  to,
+  btnText,
+  btnClass,
+  callback = () => {},
+  duration = 800,
+  offset = 0
+}) => {
   const scrollToDestination: Function = (e) => {
     const scrollDestination = document.getElementById(`${to}`) || e.target;
     const top = scrollDestination.getBoundingClientRect().top;
 
     animateScroll.scrollTo(top + parseInt(offset, 10), { duration });
-    setTimeout(callback, duration);
+
+    setTimeout(() => {
+      callback(to);
+    }, duration);
   };
 
   return (

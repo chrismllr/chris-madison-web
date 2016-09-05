@@ -14,10 +14,14 @@ class App extends Component {
       (err) => console.log('error', err)
     );
 
+  navItemClicked = (sectionName) => {
+    console.log('nav item clicked', sectionName);
+  };
+
   render() {
     return (
       <main className="App">
-        <Header />
+        <Header navItemClicked={this.navItemClicked} />
 
         <div
           className="Intro"

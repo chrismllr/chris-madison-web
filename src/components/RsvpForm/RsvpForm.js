@@ -3,7 +3,7 @@ import TextInput from '../TextInput/TextInput';
 import ButtonChoice from '../ButtonChoice/ButtonChoice';
 import './RsvpForm.css';
 
-export class RsvpForm extends Component {
+class RsvpForm extends Component {
 
   constructor (props) {
     super(props);
@@ -81,8 +81,8 @@ export class RsvpForm extends Component {
         </div>
       </form>
     );
-
   }
 
 }
+
 export default RsvpForm;
