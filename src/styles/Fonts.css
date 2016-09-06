@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../static/fonts/icomoon.eot?fz7too');
+  src:  url('../static/fonts/icomoon.eot?fz7too#iefix') format('embedded-opentype'),
+    url('../static/fonts/icomoon.ttf?fz7too') format('truetype'),
+    url('../static/fonts/icomoon.woff?fz7too') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Palm Canyon';
+  src:  url('../static/fonts/PalmCanyonDrive-Regular.eot?4fss3');
+  src:  url('../static/fonts/PalmCanyonDrive-Regular.eot?4fss3#iefix') format('embedded-opentype'),
+    url('../static/fonts/PalmCanyonDrive-Regular.ttf?4fss3') format('truetype'),
+    url('../static/fonts/PalmCanyonDrive-Regular.woff?4fss3') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e905";
+}
+.icon-emoji-sad:before {
+  content: "\e900";
+}
+.icon-emoji-happy:before {
+  content: "\e901";
+}

@@ -38,6 +38,7 @@
     "opn": "4.0.2",
     "postcss-loader": "0.9.1",
     "promise": "7.1.1",
+    "raw-loader": "^0.5.1",
     "recursive-readdir": "2.0.0",
     "rimraf": "2.5.4",
     "strip-ansi": "3.0.1",
@@ -50,7 +51,8 @@
   "dependencies": {
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
-    "react-scroll": "^1.2.0"
+    "react-scroll": "^1.2.0",
+    "react-svg-inline": "^1.2.0"
   },
   "scripts": {
     "start": "node ./scripts/start.js",

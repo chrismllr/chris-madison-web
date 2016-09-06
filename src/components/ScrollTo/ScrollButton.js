@@ -6,6 +6,7 @@ export const ScrollButton = ({
   id = 'ScrollButton0',
   to,
   btnText,
+  btnAction,
   btnClass,
   callback = () => {},
   duration = 800,
@@ -14,6 +15,9 @@ export const ScrollButton = ({
   const scrollToDestination: Function = (e) => {
     const scrollDestination = document.getElementById(`${to}`) || e.target;
     const top = scrollDestination.getBoundingClientRect().top;
+
+    e.persist();
+    btnAction(e);
 
     animateScroll.scrollTo(top + parseInt(offset, 10), { duration });
 
@@ -33,6 +37,7 @@ ScrollButton.propTypes = {
   offset: React.PropTypes.any,
   btnText: React.PropTypes.string,
   btnClass: React.PropTypes.string,
+  btnAction: React.PropTypes.func,
   callback: React.PropTypes.func,
   duration: React.PropTypes.number
 };

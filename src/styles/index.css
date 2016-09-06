@@ -9,16 +9,6 @@ html {
   -webkit-font-smoothing: subpixel-antialiased;
 }
 
-@font-face {
-  font-family: 'Palm Canyon';
-  src:  url('./static/fonts/PalmCanyonDrive-Regular.eot?4fss3');
-  src:  url('./static/fonts/PalmCanyonDrive-Regular.eot?4fss3#iefix') format('embedded-opentype'),
-    url('./static/fonts/PalmCanyonDrive-Regular.ttf?4fss3') format('truetype'),
-    url('./static/fonts/PalmCanyonDrive-Regular.woff?4fss3') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html, body, .container {
   width: 100%;
   height: auto;
@@ -56,15 +46,17 @@ h4, h5, h6, p {
 .btn {
   font-family: 'Quicksand', sans-serif;
   background-color: transparent;
-  border: 2px solid #555;
+  border: 2px solid #222;
+  color: #222;
   border-radius: 5px;
   font-size: 1.33333rem;
   height: 100%;
-  width: 100%;
   padding: 1rem 1.33333rem;
   font-weight: 700;
   cursor: pointer;
   text-transform: uppercase;
+
+  transition: .2s ease-in-out;
 }
 
 button:focus {
@@ -92,11 +84,13 @@ label {
 
 input {
   padding: 1rem .833333rem;
+  color: #222;
   border: 1px solid #222;
   font-family: "Quicksand", sans-serif;
   border-radius: 3px;
   font-size: 1.33333rem;
   width: 100%;
+  transition: .2s ease-in-out;
 }
 
 input:focus {

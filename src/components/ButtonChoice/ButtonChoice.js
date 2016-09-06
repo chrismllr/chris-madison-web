@@ -31,7 +31,7 @@ export const ButtonChoice = ({
         onClick={btnClick}
         {...attrs}
       >
-        <i className='material-icons'>{iconName}</i>
+        <i className={`icon-${iconName}`}></i>
       </button>
     </div>
   )

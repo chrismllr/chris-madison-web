@@ -1,9 +1,13 @@
 .Rsvp-form-row {
   display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
+  align-items: center;
+  flex-direction: column;
 }
 
 .Rsvp-form-input {
+  margin-bottom: 1rem;
   width: 100%;
 }
 
@@ -14,13 +18,13 @@
 }
 
 .Rsvp-button-yes {
-  border-color: rgb(77,198,255);
-  color: rgb(77,198,255);
+  border-color: #4dc6ff;
+  color: #4dc6ff;
 }
 
 .Rsvp-button-yes-selected {
-  border-color: rgb(77,198,255);
-  background-color: rgb(77,198,255);
+  border-color: #4dc6ff;
+  background-color: #4dc6ff;
   color: #fff;
 }
 
@@ -35,11 +39,21 @@
   color: #fff;
 }
 
-.Rsvp.submit-btn {
+.Rsvp-submit-btn {
   width: auto;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+
+.Rsvp-disclaimer {
+  color: #555;
 }
 
 @media (min-width: 600px) {
+  .Rsvp-form-row {
+    flex-direction: row;
+  }
+
   .Rsvp-form-input {
     width: 50%;
   }

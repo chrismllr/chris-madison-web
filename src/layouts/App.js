@@ -3,7 +3,11 @@ import Header from '../components/Header/Header';
 import RsvpForm from '../components/RsvpForm/RsvpForm';
 import * as RSVPService from '../services/rsvp.service';
 import IntroBg from '../static/intro-bg.jpg';
+import SVGInline from 'react-svg-inline';
 import './App.css';
+
+import SaveDate from '../static/save-date-1.svg';
+import Olancha from '../static/olancha.jpg';
 
 class App extends Component {
 
@@ -18,7 +22,7 @@ class App extends Component {
     console.log('nav item clicked', sectionName);
   };
 
-  render() {
+  render () {
     return (
       <main className="App">
         <Header navItemClicked={this.navItemClicked} />
@@ -29,7 +33,29 @@ class App extends Component {
         ></div>
 
         <div className="App-content">
-          <div id='wedding'></div>
+          <section id='details'>
+            <div className='container split-section'>
+              <div className='split-section__half'>
+                <h2>When?</h2>
+                <h6>May 20, 2017</h6>
+                <h6>Ceremony at 6 o'clock</h6>
+                <h6>Food and Fun until 10</h6>
+              </div>
+              <div className='split-section__half'>
+                <h2>Where?</h2>
+                <h6>436 E. Avenida Olancha</h6>
+                <h6>Palm Springs, CA</h6>
+                <h6>92264</h6>
+              </div>
+            </div>
+          </section>
+
+          <section className='olancha-section'
+            style={{ backgroundImage: `url("${Olancha}")` }}>
+            <div className="container">
+              <SVGInline svg={SaveDate} />
+            </div>
+          </section>
 
           <section id='rsvp' className="text-center">
             <div className="container">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextInput from '../TextInput/TextInput';
 import ButtonChoice from '../ButtonChoice/ButtonChoice';
+
 import './RsvpForm.css';
 
 class RsvpForm extends Component {
@@ -26,7 +27,6 @@ class RsvpForm extends Component {
     this.props.submitForm(this.state);
   }
 
-
   render () {
     return (
       <form onSubmit={this.submitForm}>
@@ -34,7 +34,7 @@ class RsvpForm extends Component {
           <ButtonChoice
             value={true}
             btnText="Duh!"
-            iconName="check"
+            iconName="emoji-happy"
             className="Rsvp-button-yes"
             activeClass="Rsvp-button-yes-selected"
             selected={this.state.attending}
@@ -43,7 +43,7 @@ class RsvpForm extends Component {
           <ButtonChoice
             value={false}
             btnText="Nah!"
-            iconName="close"
+            iconName="emoji-sad"
             className="Rsvp-button-no"
             activeClass="Rsvp-button-no-selected"
             selected={!this.state.attending}
@@ -53,7 +53,7 @@ class RsvpForm extends Component {
 
         <div className="Rsvp-form-row">
           <div className="Rsvp-form-input">
-            <label htmlFor="full-name">Full Name</label>
+            <label htmlFor="full-name">What's Your Name?</label>
             <TextInput
               recordField="name"
               value={this.state.name}
@@ -64,13 +64,13 @@ class RsvpForm extends Component {
             />
           </div>
           <div className="Rsvp-form-input">
-            <label htmlFor="hot-date">Bringing a hot date?</label>
+            <label htmlFor="hot-date">Who's your hot date?</label>
             <TextInput
               recordField="plusOne"
               value={this.state.plusOne}
               onChange={this.onChange}
               attrs={{
-                placeholder: 'Their full name'
+                placeholder: 'Full name'
               }}
             />
           </div>
@@ -78,6 +78,9 @@ class RsvpForm extends Component {
 
         <div className="Rsvp-form-row">
           <button className='Rsvp-submit-btn btn'>Submit</button>
+        </div>
+        <div className="Rsvp-form-row">
+          <span className='Rsvp-disclaimer'>*Although we really love your kiddos, we are respectfully requesting an adults only celebration due to the size of the location.</span>
         </div>
       </form>
     );

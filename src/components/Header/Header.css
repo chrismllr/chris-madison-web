@@ -1,10 +1,12 @@
 .Header-fixed {
-  position: fixed;
   width: 100%;
+  height: 94px;
+  z-index: 100;
 }
 
 .Header {
   display: flex;
+  position: relative;
 }
 
 .Header h1 {
